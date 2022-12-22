@@ -1,7 +1,7 @@
-import React from 'react';
+import { StyledMainDestination } from '../styles/Destination.style';
 
 const Destination = () => {
-  return <div>Destination</div>;
+  return <StyledMainDestination>Destination</StyledMainDestination>;
 };
 
 export default Destination;

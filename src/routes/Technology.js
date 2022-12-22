@@ -1,7 +1,7 @@
-import React from 'react';
+import { StyledMainTech } from '../styles/Technology.style';
 
 const Technology = () => {
-  return <div>Technology</div>;
+  return <StyledMainTech>Technology</StyledMainTech>;
 };
 
 export default Technology;

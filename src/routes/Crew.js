@@ -1,7 +1,7 @@
-import React from 'react';
+import { StyledMainCrew } from '../styles/Crew.style';
 
 const Crew = () => {
-  return <div>Crew</div>;
+  return <StyledMainCrew>Crew</StyledMainCrew>;
 };
 
 export default Crew;
