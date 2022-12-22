@@ -10,7 +10,7 @@ import Logo from '../assets/shared/logo.svg';
 const Header = () => {
   return (
     <StyledHeader>
-      <StyledLogoLink>
+      <StyledLogoLink to="/">
         <StyledLogo src={Logo} />
       </StyledLogoLink>
       <StyledSeparator />

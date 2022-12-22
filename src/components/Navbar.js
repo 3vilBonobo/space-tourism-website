@@ -11,22 +11,22 @@ const Navbar = () => {
     <StyledNavbar>
       <StyledNavList>
         <StyledNavListItem>
-          <StyledNavLink>
+          <StyledNavLink to="/">
             <StyledNavSpan>00</StyledNavSpan>HOME
           </StyledNavLink>
         </StyledNavListItem>
         <StyledNavListItem>
-          <StyledNavLink>
+          <StyledNavLink to="/destination">
             <StyledNavSpan>01</StyledNavSpan>DESTINATION
           </StyledNavLink>
         </StyledNavListItem>
         <StyledNavListItem>
-          <StyledNavLink>
+          <StyledNavLink to="/crew">
             <StyledNavSpan>02</StyledNavSpan>CREW
           </StyledNavLink>
         </StyledNavListItem>
         <StyledNavListItem>
-          <StyledNavLink>
+          <StyledNavLink to="/technology">
             <StyledNavSpan>03</StyledNavSpan>TECHNOLOGY
           </StyledNavLink>
         </StyledNavListItem>

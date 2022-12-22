@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom';
 export const StyledHeader = styled.header`
   position: absolute;
   top: 0px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   z-index: 2;
   @media only screen and (min-width: 600px) {
     flex-direction: row;
