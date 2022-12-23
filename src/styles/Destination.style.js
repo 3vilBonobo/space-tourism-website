@@ -23,3 +23,27 @@ export const StyledMainDestination = styled.main`
     height: 100vh;
   }
 `;
+
+export const StyledTitleDest = styled.h1``;
+
+export const StyledBtnListDest = styled.ul``;
+
+export const StyledBtnDest = styled.li``;
+
+export const StyledPlanetSection = styled.section``;
+
+export const StyledPlanetImage = styled.img``;
+
+export const StyledPlanetInfoSection = styled.div``;
+
+export const StyledPlanetTitle = styled.h2``;
+
+export const StyledPlanetText = styled.p``;
+
+export const StyledPlanetInfoList = styled.ul``;
+
+export const StyledPlanetInfoItem = styled.li``;
+
+export const StyledPlanetInfoTitle = styled.h3``;
+
+export const StyledPlanetInfoNum = styled.p``;
