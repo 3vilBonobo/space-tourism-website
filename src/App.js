@@ -4,6 +4,7 @@ import Home from './routes/Home';
 import Destination from './routes/Destination';
 import Crew from './routes/Crew';
 import Technology from './routes/Technology';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="crew" element={<Crew />} />
         <Route path="technology" element={<Technology />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
