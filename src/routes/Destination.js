@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { destinations } from '../data';
 import {
   StyledMainDestination,
+  StyledTitleSpanDest,
   StyledTitleDest,
   StyledBtnListDest,
   StyledBtnDest,
@@ -16,9 +18,15 @@ import {
 } from '../styles/Destination.style';
 
 const Destination = () => {
+  // const [destinations] = useState();
+
+  // const { name, image, description, distance, travel } = destinations;
+
   return (
     <StyledMainDestination>
-      <StyledTitleDest></StyledTitleDest>
+      <StyledTitleDest>
+        <StyledTitleSpanDest>01 </StyledTitleSpanDest>Pick your destination
+      </StyledTitleDest>
       <StyledBtnListDest>
         <StyledBtnDest></StyledBtnDest>
       </StyledBtnListDest>

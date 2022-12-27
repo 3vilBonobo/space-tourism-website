@@ -23,8 +23,25 @@ export const StyledMainDestination = styled.main`
     height: 100vh;
   }
 `;
+export const StyledTitleSpanDest = styled.span`
+  color: ${(props) => props.theme.colors.lightCyan};
+`;
 
-export const StyledTitleDest = styled.h1``;
+export const StyledTitleDest = styled.h1`
+  font-family: ${(props) => props.theme.fonts.fontSansSerif};
+  font-size: 16px;
+  color: ${(props) => props.theme.colors.white};
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  @media only screen and (min-width: 600px) {
+    font-size: 20px;
+    letter-spacing: 3.38px;
+  }
+  @media only screen and (min-width: 768px) {
+    font-size: 28px;
+    letter-spacing: 4.72px;
+  }
+`;
 
 export const StyledBtnListDest = styled.ul``;
 

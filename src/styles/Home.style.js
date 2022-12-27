@@ -35,8 +35,8 @@ export const StyledLeftSectionHome = styled.section`
 export const StyledUpperTitleHome = styled.h2`
   font-family: ${(props) => props.theme.fonts.fontSansSerif};
   font-size: 16px;
-  text-transform: uppercase;
   color: ${(props) => props.theme.colors.lightCyan};
+  text-transform: uppercase;
   @media only screen and (min-width: 600px) {
   }
   @media only screen and (min-width: 768px) {
