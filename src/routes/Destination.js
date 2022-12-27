@@ -5,6 +5,7 @@ import {
   StyledTitleSpanDest,
   StyledTitleDest,
   StyledBtnListDest,
+  StyledBtnListItemDest,
   StyledBtnDest,
   StyledPlanetSection,
   StyledPlanetImage,
@@ -18,29 +19,42 @@ import {
 } from '../styles/Destination.style';
 
 const Destination = () => {
-  // const [destinations] = useState();
+  const [planets] = useState(destinations);
+  const [value, setValue] = useState(1);
+  const { name, images, description, distance, travel } = planets[value];
 
-  // const { name, image, description, distance, travel } = destinations;
+  const changePlanet = (idx) => {
+    return setValue(idx);
+  };
 
   return (
     <StyledMainDestination>
       <StyledTitleDest>
         <StyledTitleSpanDest>01 </StyledTitleSpanDest>Pick your destination
       </StyledTitleDest>
-      <StyledBtnListDest>
-        <StyledBtnDest></StyledBtnDest>
-      </StyledBtnListDest>
 
       <StyledPlanetSection>
-        <StyledPlanetImage />
+        <StyledPlanetImage src={images.png} />
+
         <StyledPlanetInfoSection>
-          <StyledPlanetTitle></StyledPlanetTitle>
-          <StyledPlanetText></StyledPlanetText>
+          <StyledBtnListDest>
+            {planets.map((item, index) => {
+              return (
+                <StyledBtnListItemDest>
+                  <StyledBtnDest onClick={() => changePlanet(index)}>
+                    {item.name}
+                  </StyledBtnDest>
+                </StyledBtnListItemDest>
+              );
+            })}
+          </StyledBtnListDest>
+          <StyledPlanetTitle>{name}</StyledPlanetTitle>
+          <StyledPlanetText>{description}</StyledPlanetText>
           <StyledPlanetInfoList>
             <StyledPlanetInfoItem>
-              <StyledPlanetInfoTitle></StyledPlanetInfoTitle>
+              <StyledPlanetInfoTitle>{distance}</StyledPlanetInfoTitle>
             </StyledPlanetInfoItem>
-            <StyledPlanetInfoNum></StyledPlanetInfoNum>
+            <StyledPlanetInfoNum>{travel}</StyledPlanetInfoNum>
           </StyledPlanetInfoList>
         </StyledPlanetInfoSection>
       </StyledPlanetSection>

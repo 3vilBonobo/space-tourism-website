@@ -11,4 +11,5 @@ export const StyledFooterContainer = styled.footer`
   background-color: transparent;
   padding: 20px;
   color: ${(props) => props.theme.colors.lightCyan};
+  font-family: ${(props) => props.theme.fonts.fontSansSerif};
 `;

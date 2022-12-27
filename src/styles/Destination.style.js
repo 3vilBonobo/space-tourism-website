@@ -18,7 +18,6 @@ export const StyledMainDestination = styled.main`
   }
   @media only screen and (min-width: 768px) {
     background-image: url(${bgDestDesktop});
-    flex-direction: row;
     padding-inline: 200px;
     height: 100vh;
   }
@@ -43,24 +42,81 @@ export const StyledTitleDest = styled.h1`
   }
 `;
 
-export const StyledBtnListDest = styled.ul``;
+export const StyledBtnListDest = styled.ul`
+  display: flex;
+  flex-direction: row;
+`;
 
-export const StyledBtnDest = styled.li``;
+export const StyledBtnListItemDest = styled.li`
+  list-style: none;
+`;
 
-export const StyledPlanetSection = styled.section``;
+export const StyledBtnDest = styled.button`
+  font-family: ${(props) => props.theme.fonts.fontSansSerif};
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  color: ${(props) => props.theme.colors.lightCyan};
+`;
+
+export const StyledPlanetSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media only screen and (min-width: 600px) {
+  }
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
 
 export const StyledPlanetImage = styled.img``;
 
 export const StyledPlanetInfoSection = styled.div``;
 
-export const StyledPlanetTitle = styled.h2``;
+export const StyledPlanetTitle = styled.h2`
+  color: ${(props) => props.theme.colors.white};
+  font-family: ${(props) => props.theme.fonts.fontSerif};
+  font-size: 56px;
+  text-transform: uppercase;
+  @media only screen and (min-width: 600px) {
+    font-size: 80px;
+  }
+  @media only screen and (min-width: 768px) {
+    font-size: 100px;
+  }
+`;
 
-export const StyledPlanetText = styled.p``;
+export const StyledPlanetText = styled.p`
+  color: ${(props) => props.theme.colors.lightCyan};
+  font-family: ${(props) => props.theme.fonts.fontSansSerif};
+`;
 
-export const StyledPlanetInfoList = styled.ul``;
+export const StyledPlanetInfoList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 600px) {
+    flex-direction: row;
+  }
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+`;
 
-export const StyledPlanetInfoItem = styled.li``;
+export const StyledPlanetInfoItem = styled.li`
+  list-style: none;
+`;
 
-export const StyledPlanetInfoTitle = styled.h3``;
+export const StyledPlanetInfoTitle = styled.h3`
+  color: ${(props) => props.theme.colors.lightCyan};
+  font-family: ${(props) => props.theme.fonts.fontSansSerif};
+  text-transform: uppercase;
+`;
 
-export const StyledPlanetInfoNum = styled.p``;
+export const StyledPlanetInfoNum = styled.p`
+  color: ${(props) => props.theme.colors.white};
+  font-family: ${(props) => props.theme.fonts.fontSerif};
+  text-transform: uppercase;
+`;
