@@ -22,7 +22,7 @@ const home = () => {
         </StyledTextHome>
       </StyledLeftSectionHome>
       <StyledRightSectionHome>
-        <StyledButtonHome>EXPLORE</StyledButtonHome>
+        <StyledButtonHome to={'/destination'}>EXPLORE</StyledButtonHome>
       </StyledRightSectionHome>
     </StyledMainHome>
   );
