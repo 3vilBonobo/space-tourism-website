@@ -12,8 +12,10 @@ import {
   StyledPlanetInfoSection,
   StyledPlanetTitle,
   StyledPlanetText,
+  StyledPlanetSeparator,
   StyledPlanetInfoList,
   StyledPlanetInfoItem,
+  StyledPlanetInfoDistance,
   StyledPlanetInfoTitle,
   StyledPlanetInfoNum,
 } from '../styles/Destination.style';
@@ -50,11 +52,18 @@ const Destination = () => {
           </StyledBtnListDest>
           <StyledPlanetTitle>{name}</StyledPlanetTitle>
           <StyledPlanetText>{description}</StyledPlanetText>
+          <StyledPlanetSeparator />
           <StyledPlanetInfoList>
             <StyledPlanetInfoItem>
+              <StyledPlanetInfoDistance>Avg. Distance</StyledPlanetInfoDistance>
               <StyledPlanetInfoTitle>{distance}</StyledPlanetInfoTitle>
             </StyledPlanetInfoItem>
-            <StyledPlanetInfoNum>{travel}</StyledPlanetInfoNum>
+            <StyledPlanetInfoItem>
+              <StyledPlanetInfoDistance>
+                Est. travel time
+              </StyledPlanetInfoDistance>
+              <StyledPlanetInfoNum>{travel}</StyledPlanetInfoNum>
+            </StyledPlanetInfoItem>
           </StyledPlanetInfoList>
         </StyledPlanetInfoSection>
       </StyledPlanetSection>

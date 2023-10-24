@@ -3,7 +3,8 @@ import { StyledFooterContainer } from '../styles/Footer.style';
 const Footer = () => {
   return (
     <StyledFooterContainer>
-      Coded by Irinella Boutsika - Designed by Fronted Mentor
+      Coded by <a href="https://github.com/3vilBonobo"> Irinella Boutsika</a> -
+      Designed by Fronted Mentor
     </StyledFooterContainer>
   );
 };

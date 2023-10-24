@@ -46,6 +46,7 @@ export const StyledBtnListDest = styled.ul`
   display: flex;
   flex-direction: row;
   width: 285px;
+  margin-bottom: 35px;
 `;
 
 export const StyledBtnListItemDest = styled.li`
@@ -61,6 +62,32 @@ export const StyledBtnDest = styled.button`
   border: none;
   margin-inline: 10px;
   color: ${(props) => props.theme.colors.lightCyan};
+  text-decoration: none;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: -1;
+    right: 0;
+    width: 0;
+    bottom: -38px;
+    background: ${(props) => props.theme.colors.white};
+    height: 3px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    left: 0;
+    right: auto;
+    width: 110%;
+  }
+  &:hover::after {
+    background: ${(props) => props.theme.colors.lightGray};
+  }
 `;
 
 export const StyledPlanetSection = styled.section`
@@ -106,7 +133,9 @@ export const StyledPlanetImage = styled.img`
   animation-timing-function: linear;
   margin: 100px;
 `;
-export const StyledPlanetInfoSection = styled.div``;
+export const StyledPlanetInfoSection = styled.div`
+  margin-left: 50px;
+`;
 
 export const StyledPlanetTitle = styled.h2`
   color: ${(props) => props.theme.colors.white};
@@ -124,11 +153,26 @@ export const StyledPlanetTitle = styled.h2`
 export const StyledPlanetText = styled.p`
   color: ${(props) => props.theme.colors.lightCyan};
   font-family: ${(props) => props.theme.fonts.fontSansSerif};
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 32px;
+  max-width: 420px;
+`;
+
+export const StyledPlanetSeparator = styled.hr`
+  max-width: 420px;
+  height: 0.5px;
+  color: ${(props) => props.theme.colors.lightGray};
+  margin: 50px 0 5px 0;
 `;
 
 export const StyledPlanetInfoList = styled.ul`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 80px;
   @media only screen and (min-width: 600px) {
     flex-direction: row;
   }
@@ -140,15 +184,25 @@ export const StyledPlanetInfoList = styled.ul`
 export const StyledPlanetInfoItem = styled.li`
   list-style: none;
 `;
+export const StyledPlanetInfoDistance = styled.p`
+  color: ${(props) => props.theme.colors.lightGray};
+  font-family: ${(props) => props.theme.fonts.fontSansSerif};
+  text-transform: uppercase;
+  margin: 25px 0 15px 0;
+`;
 
 export const StyledPlanetInfoTitle = styled.h3`
   color: ${(props) => props.theme.colors.lightCyan};
-  font-family: ${(props) => props.theme.fonts.fontSansSerif};
+  font-family: ${(props) => props.theme.fonts.fontSerif};
+  font-size: 28px;
+  font-weight: 300;
   text-transform: uppercase;
 `;
 
 export const StyledPlanetInfoNum = styled.p`
   color: ${(props) => props.theme.colors.white};
   font-family: ${(props) => props.theme.fonts.fontSerif};
+  font-size: 28px;
+  font-weight: 300;
   text-transform: uppercase;
 `;
