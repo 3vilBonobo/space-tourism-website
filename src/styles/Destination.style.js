@@ -54,27 +54,25 @@ export const StyledBtnListItemDest = styled.li`
   width: 100%;
 `;
 
-export const StyledBtnDest = styled.button`
+export const StyledBtnDest = styled.a`
+  color: ${(props) => props.theme.colors.lightCyan};
   font-family: ${(props) => props.theme.fonts.fontSansSerif};
   font-size: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
   background-color: transparent;
-  border: none;
   margin-inline: 10px;
-  color: ${(props) => props.theme.colors.lightCyan};
+  border: none;
   text-decoration: none;
-  position: relative;
+  cursor: pointer;
   &::after {
     content: '';
-    position: absolute;
+    background: ${(props) => props.theme.colors.white};
+    margin-top: 10px;
     display: block;
-    z-index: -1;
     right: 0;
     width: 0;
-    bottom: -38px;
-    background: ${(props) => props.theme.colors.white};
-    height: 3px;
+    height: 2px;
     transition-property: width;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
@@ -84,7 +82,7 @@ export const StyledBtnDest = styled.button`
   &:active::after {
     left: 0;
     right: auto;
-    width: 110%;
+    width: 90%;
   }
   &:hover::after {
     background: ${(props) => props.theme.colors.lightGray};
