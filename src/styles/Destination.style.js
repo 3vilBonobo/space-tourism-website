@@ -57,6 +57,7 @@ export const StyledBtnListItemDest = styled.li`
 export const StyledBtnDest = styled.button`
   font-family: ${(props) => props.theme.fonts.fontSansSerif};
   font-size: 16px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   background-color: transparent;
   border: none;
@@ -141,6 +142,7 @@ export const StyledPlanetTitle = styled.h2`
   color: ${(props) => props.theme.colors.white};
   font-family: ${(props) => props.theme.fonts.fontSerif};
   font-size: 56px;
+  font-weight: 400;
   text-transform: uppercase;
   @media only screen and (min-width: 600px) {
     font-size: 80px;
@@ -154,7 +156,7 @@ export const StyledPlanetText = styled.p`
   color: ${(props) => props.theme.colors.lightCyan};
   font-family: ${(props) => props.theme.fonts.fontSansSerif};
   font-size: 19px;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 1px;
   line-height: 32px;
   max-width: 420px;
@@ -164,6 +166,7 @@ export const StyledPlanetSeparator = styled.hr`
   max-width: 420px;
   height: 0.5px;
   color: ${(props) => props.theme.colors.lightGray};
+  opacity: 0.5;
   margin: 50px 0 5px 0;
 `;
 
@@ -192,7 +195,7 @@ export const StyledPlanetInfoDistance = styled.p`
 `;
 
 export const StyledPlanetInfoTitle = styled.h3`
-  color: ${(props) => props.theme.colors.lightCyan};
+  color: ${(props) => props.theme.colors.white};
   font-family: ${(props) => props.theme.fonts.fontSerif};
   font-size: 28px;
   font-weight: 300;

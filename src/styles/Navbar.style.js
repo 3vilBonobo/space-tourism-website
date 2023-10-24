@@ -25,6 +25,7 @@ export const StyledNavListItem = styled.li``;
 export const StyledNavLink = styled(Link)`
   color: ${(props) => props.theme.colors.lightCyan};
   font-family: ${(props) => props.theme.fonts.fontSansSerif};
+  letter-spacing: 2px;
   text-decoration: none;
   position: relative;
   &::after {

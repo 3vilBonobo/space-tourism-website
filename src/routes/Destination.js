@@ -22,7 +22,7 @@ import {
 
 const Destination = () => {
   const [planets] = useState(destinations);
-  const [value, setValue] = useState(1);
+  const [value, setValue] = useState(0);
   const { name, images, description, distance, travel } = planets[value];
 
   const changePlanet = (idx) => {
