@@ -8,7 +8,7 @@ export const StyledNavbar = styled.nav`
   width: 830px;
   height: 96px;
   background: transparent;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(20px);
 `;
 
 export const StyledNavList = styled.ul`
@@ -18,7 +18,6 @@ export const StyledNavList = styled.ul`
   align-items: center;
   justify-content: space-between;
   width: 542px;
-  border: 1px solid green;
 `;
 
 export const StyledNavListItem = styled.li``;
@@ -27,6 +26,31 @@ export const StyledNavLink = styled(Link)`
   color: ${(props) => props.theme.colors.lightCyan};
   font-family: ${(props) => props.theme.fonts.fontSansSerif};
   text-decoration: none;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: -1;
+    right: 0;
+    width: 0;
+    bottom: -38px;
+    background: ${(props) => props.theme.colors.white};
+    height: 3px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    left: 0;
+    right: auto;
+    width: 110%;
+  }
+  &:hover::after {
+    background: ${(props) => props.theme.colors.lightGray};
+  }
 `;
 
 export const StyledNavSpan = styled.span`

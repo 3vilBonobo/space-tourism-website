@@ -15,6 +15,7 @@ export const StyledHeader = styled.header`
   }
   @media only screen and (min-width: 768px) {
     flex-direction: row;
+    margin-top: 40px;
   }
 `;
 

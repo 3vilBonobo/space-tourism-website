@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import bgDestDesktop from '../assets/destination/background-destination-desktop.jpg';
 import bgDestTablet from '../assets/destination/background-destination-tablet.jpg';
 import bgDestMobile from '../assets/destination/background-destination-mobile.jpg';
@@ -45,10 +45,12 @@ export const StyledTitleDest = styled.h1`
 export const StyledBtnListDest = styled.ul`
   display: flex;
   flex-direction: row;
+  width: 285px;
 `;
 
 export const StyledBtnListItemDest = styled.li`
   list-style: none;
+  width: 100%;
 `;
 
 export const StyledBtnDest = styled.button`
@@ -57,6 +59,7 @@ export const StyledBtnDest = styled.button`
   text-transform: uppercase;
   background-color: transparent;
   border: none;
+  margin-inline: 10px;
   color: ${(props) => props.theme.colors.lightCyan};
 `;
 
@@ -65,6 +68,7 @@ export const StyledPlanetSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   @media only screen and (min-width: 600px) {
   }
   @media only screen and (min-width: 768px) {
@@ -72,8 +76,36 @@ export const StyledPlanetSection = styled.section`
   }
 `;
 
-export const StyledPlanetImage = styled.img``;
+export const PlanetRotationAnimation = keyframes`
+  0% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  25% {
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 90deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  75% {
+    -webkit-transform: rotate3d(0, 0, 1, 270deg);
+    transform: rotate3d(0, 0, 1, 270deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
 
+`;
+export const StyledPlanetImage = styled.img`
+  animation-name: ${PlanetRotationAnimation};
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  margin: 100px;
+`;
 export const StyledPlanetInfoSection = styled.div``;
 
 export const StyledPlanetTitle = styled.h2`

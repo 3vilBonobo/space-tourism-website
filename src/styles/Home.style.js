@@ -92,8 +92,9 @@ export const StyledButtonHome = styled(Link)`
   font-family: ${(props) => props.theme.fonts.fontSerif};
   text-decoration: none;
   text-align: center;
+  transition: 0.5s;
   &:hover {
-    box-shadow: 10px 200px grey;
+    box-shadow: 0px 0px 20px 20px grey;
   }
   @media only screen and (min-width: 600px) {
     width: 242px;
