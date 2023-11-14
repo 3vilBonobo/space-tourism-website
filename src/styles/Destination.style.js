@@ -5,21 +5,21 @@ import bgDestMobile from '../assets/destination/background-destination-mobile.jp
 
 export const StyledMainDestination = styled.main`
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
   background-color: black;
   background-image: url(${bgDestMobile});
   background-repeat: no-repeat;
   background-size: cover;
+  height: 130vh;
   @media only screen and (min-width: 600px) {
     background-image: url(${bgDestTablet});
   }
   @media only screen and (min-width: 768px) {
     background-image: url(${bgDestDesktop});
     padding-inline: 200px;
-    height: 100vh;
   }
 `;
 export const StyledTitleSpanDest = styled.span`
@@ -32,6 +32,9 @@ export const StyledTitleDest = styled.h1`
   color: ${(props) => props.theme.colors.white};
   text-transform: uppercase;
   letter-spacing: 2.7px;
+  align-self: start;
+  margin-top: 200px;
+  position: absolute;
   @media only screen and (min-width: 600px) {
     font-size: 20px;
     letter-spacing: 3.38px;
@@ -47,6 +50,7 @@ export const StyledBtnListDest = styled.ul`
   flex-direction: row;
   width: 285px;
   margin-bottom: 35px;
+  margin-top: 50px;
 `;
 
 export const StyledBtnListItemDest = styled.li`
@@ -68,8 +72,8 @@ export const StyledBtnDest = styled.a`
   &::after {
     content: '';
     background: ${(props) => props.theme.colors.white};
-    margin-top: 10px;
     display: block;
+    margin-top: 10px;
     right: 0;
     width: 0;
     height: 2px;
@@ -94,7 +98,8 @@ export const StyledPlanetSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  position: absolute;
+  top: 200px;
   @media only screen and (min-width: 600px) {
   }
   @media only screen and (min-width: 768px) {
